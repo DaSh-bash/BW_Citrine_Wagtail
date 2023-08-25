@@ -15,8 +15,8 @@ print('T1:', sys.argv[2])
 print('Ne after T1:', sys.argv[3])
 print('T2:', sys.argv[4])
 print('Ne after T2:', sys.argv[5])
-print('T2:', sys.argv[6])
-print('Ne after T2:', sys.argv[7])
+print('T3:', sys.argv[6])
+print('Ne after T3:', sys.argv[7])
 print('output file:', sys.argv[8])
 
 
@@ -35,9 +35,9 @@ def demogr_model_0_1(t1,t2,t3,NeT1,NeT2,NeT3):
     demography.add_population(name="T3", initial_size=NeT3)
 
     #adding split times
-    demography.add_population_split(time=t1, derived=["gra","sam"], ancestral="T1")
-    demography.add_population_split(time=t2, derived=["T1","alb"], ancestral="T2")
-    demography.add_population_split(time=t3, derived=["T2","agu"], ancestral="T3")
+    demography.add_population_split(time=t1*1e6, derived=["gra","sam"], ancestral="T1")
+    demography.add_population_split(time=t2*1e6, derived=["T1","alb"], ancestral="T2")
+    demography.add_population_split(time=t3*1e6, derived=["T2","agu"], ancestral="T3")
 
     #setting up gene flow
     #demography.set_migration_rate("alb", "agu", mig_rate)
