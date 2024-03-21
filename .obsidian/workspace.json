@@ -1,0 +1,169 @@
+{
+  "main": {
+    "id": "cd2d6668883d7b7d",
+    "type": "split",
+    "children": [
+      {
+        "id": "60fe2ba8d89bfc33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2bcefa1799e1e494",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20240320125726.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b97886c1ecd4c2f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e5359df66a96ce7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "97e29e104ee803c3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e102bb108773eeef",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "97de270d809093e9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4f1e48652cb611c0",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d3745aee1c43ddd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "633d2b12343b9c47",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Pasted image 20240320125726.png",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b3ae39f24ffe8419",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Pasted image 20240320125726.png",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5feb8435c06fabf1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "fde4ab5e3f95c994",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Pasted image 20240320125726.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "2bcefa1799e1e494",
+  "lastOpenFiles": [
+    "GO_terms_allgenes.txt",
+    "citrine_wag_candidates.fasta",
+    "GO_terms_raw_allgenes",
+    "CitrineWagtail/READ.ME",
+    "Pasted image 20240320125343.png",
+    "Pasted image 20240320105307.png",
+    "biol_functions_chr1.png",
+    "CitrineWagtail/Wagtails.md",
+    "CitrineWagtail/Revigo_BP_TreeMap.svg",
+    "CitrineWagtail/MM_b18xvkxr.emapper.annotations.xlsx",
+    "CitrineWagtail/Revigo_BP_Scatterplot.R",
+    "CitrineWagtail/Revigo_BP_OnScreenTable.tsv",
+    "CitrineWagtail/Revigo_BP_SimilarityMatrix.tsv",
+    "CitrineWagtail/Revigo_BP_Table.tsv",
+    "CitrineWagtail/Revigo_BP_Scatterplot.tsv",
+    "Pasted image 20240320125726.png",
+    "Pasted image 20240320103921.png",
+    "README.md",
+    "wagtail-models.pdf"
+  ]
+}
