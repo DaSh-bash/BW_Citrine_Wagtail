@@ -146,6 +146,7 @@
   },
   "active": "2bcefa1799e1e494",
   "lastOpenFiles": [
+    "CitrineWagtail/Revigo_BP_SimilarityMatrix.numbers",
     "GO_terms_allgenes.txt",
     "citrine_wag_candidates.fasta",
     "GO_terms_raw_allgenes",
@@ -163,7 +164,6 @@
     "CitrineWagtail/Revigo_BP_Scatterplot.tsv",
     "Pasted image 20240320125726.png",
     "Pasted image 20240320103921.png",
-    "README.md",
-    "wagtail-models.pdf"
+    "README.md"
   ]
 }
