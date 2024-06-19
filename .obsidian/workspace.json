@@ -16,8 +16,19 @@
                 "file": "Pasted image 20240320125726.png"
               }
             }
+          },
+          {
+            "id": "f7eba934d64367b3",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.11"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted image 20240320125726.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pasted image 20240320125726.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Pasted image 20240320125726.png"
-              }
+              "state": {}
             }
           }
         ]
@@ -144,8 +151,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2bcefa1799e1e494",
+  "active": "f7eba934d64367b3",
   "lastOpenFiles": [
+    "Pasted image 20240320125726.png",
     "CitrineWagtail/Revigo_BP_SimilarityMatrix.numbers",
     "GO_terms_allgenes.txt",
     "citrine_wag_candidates.fasta",
@@ -161,8 +169,6 @@
     "CitrineWagtail/Revigo_BP_OnScreenTable.tsv",
     "CitrineWagtail/Revigo_BP_SimilarityMatrix.tsv",
     "CitrineWagtail/Revigo_BP_Table.tsv",
-    "CitrineWagtail/Revigo_BP_Scatterplot.tsv",
-    "Pasted image 20240320125726.png",
     "Pasted image 20240320103921.png",
     "README.md"
   ]

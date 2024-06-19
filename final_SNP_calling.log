@@ -1,0 +1,200 @@
+# Entering the folder:
+cd /crex/proj/uppstore2019097/private/Gustav/01_sarek/
+
+# Making new directory for sorting step
+mkdir final_merging_D
+
+# Copying succesfully sorted files
+cp ./work/7b/3301addad7b311e384956679170a99/VHQE01000048.sort.vcf.gz .
+cp ./work/b0/1a1f2dd27d71f5dc76aaf1074b3397/VHQE01000190.sort.vcf.gz .
+cp ./work/ca/d6d97dec45c0538d7ad3ee1dadc31e/VHQE01000314.sort.vcf.gz .
+cp ./work/69/19e7cbb1a78d6dce20e76ebeff0517/VHQE01000003.sort.vcf.gz .
+cp ./work/58/ce06dbac027770202d9d19dbfa1a11/VHQE01000256.sort.vcf.gz .
+cp ./work/ba/d6a57bf41f0626938665e452585f1e/VHQE01000221.sort.vcf.gz .
+cp ./work/37/288940ed8375083c813276e6e16397/VHQE01000069.sort.vcf.gz .
+
+# Checking number fo SNPs in some of the chunks
+bcftools stats VHQE01000048.sort.vcf.gz | head -n 30 | tail -n 9
+# SN	[2]id	[3]key	[4]value
+SN	0	number of samples:	30
+SN	0	number of records:	13762586
+SN	0	number of no-ALTs:	0
+SN	0	number of SNPs:	11980369
+SN	0	number of MNPs:	0
+SN	0	number of indels:	2310412
+SN	0	number of others:	0
+SN	0	number of multiallelic sites:	2643362
+
+bcftools stats VHQE01000190.sort.vcf.gz | head -n 30 | tail -n 9
+# SN	[2]id	[3]key	[4]value
+SN	0	number of samples:	30
+SN	0	number of records:	12938048
+SN	0	number of no-ALTs:	0
+SN	0	number of SNPs:	11238842
+SN	0	number of MNPs:	0
+SN	0	number of indels:	2239451
+SN	0	number of others:	0
+SN	0	number of multiallelic sites:	2638331
+
+# Copying example of code for sorting
+bcftools sort --output VHQE01000003.sort.vcf.gz \
+        --output-type z \
+        VHQE01000003.vcf.gz
+ ### To run this step we will also need unsorted vcf files
+
+ # Finding and copying unsorted vcfs
+find ../. -name "*.vcf.gz" | grep "/VHQE01000"
+
+cp .././work/b0/1a1f2dd27d71f5dc76aaf1074b3397/VHQE01000190.vcf.gz .
+cp .././work/ca/d6d97dec45c0538d7ad3ee1dadc31e/VHQE01000314.vcf.gz .
+cp .././work/e5/ad37fea1a534b3115200c17ebc15c2/VHQE01000282.vcf.gz .
+cp .././work/f5/a2a1c240d6ab67a55d0342e23f5572/VHQE01000409.vcf.gz .
+cp .././work/69/19e7cbb1a78d6dce20e76ebeff0517/VHQE01000003.vcf.gz .
+cp .././work/93/871f8a465204aca19def25c6d3f127/VHQE01000164.vcf.gz .
+cp .././work/30/0ff03f4861c0c282f705b9c5ea8b30/VHQE01000001.vcf.gz .
+cp .././work/81/bcbb7950fff2efccd49780db86b2f9/VHQE01000190.vcf.gz .
+cp .././work/bf/143a8808477bbea4f8b2c340f1d95a/VHQE01000069.vcf.gz .
+cp .././work/1a/47369dd67dce95d75506383c76835f/VHQE01000364.vcf.gz .
+cp .././work/58/ce06dbac027770202d9d19dbfa1a11/VHQE01000256.vcf.gz .
+cp .././work/85/952015dd84180721bee3f3f53b81b4/VHQE01000221.vcf.gz .
+cp .././work/ba/88fba4e2cf42eaec1f2f10dd1d2d7b/VHQE01000020.vcf.gz .
+cp .././work/37/288940ed8375083c813276e6e16397/VHQE01000069.vcf.gz .
+cp .././work/fe/ca08f6bb6ed67f9506f52a0b34677c/VHQE01000256.vcf.gz .
+cp .././work/1c/c9976081e505abb9190a7b8369afd2/VHQE01000314.vcf.gz .
+cp .././work/02/5cf31db5d40dc351532b378e25ffab/VHQE01000393.vcf.gz .
+cp .././work/3d/2bafa93f6f2c5ef24862e309e5a56b/VHQE01000098.vcf.gz .
+cp .././work/34/1f3632604a0c5a30f3e91e5b637623/VHQE01000048.vcf.gz .
+cp .././work/8a/af8c582fc0b934cc67e1f762edc219/VHQE01000003.vcf.gz .
+cp .././work/42/c836bb84d780a94c1e9c0411f86685/VHQE01000426.vcf.gz .
+cp .././work/7b/1856a1a38ee0c1ada69f7a948a6ddc/VHQE01000468.vcf.gz .
+
+# Copiying all the indices as well
+cp .././work/ca/d6d97dec45c0538d7ad3ee1dadc31e/VHQE01000314.vcf.gz.tbi .
+cp .././work/e5/ad37fea1a534b3115200c17ebc15c2/VHQE01000282.vcf.gz.tbi .
+cp .././work/f5/a2a1c240d6ab67a55d0342e23f5572/VHQE01000409.vcf.gz.tbi .
+cp .././work/93/871f8a465204aca19def25c6d3f127/VHQE01000164.vcf.gz.tbi .
+cp .././work/30/0ff03f4861c0c282f705b9c5ea8b30/VHQE01000001.vcf.gz.tbi .
+cp .././work/1a/47369dd67dce95d75506383c76835f/VHQE01000364.vcf.gz.tbi .
+cp .././work/ba/88fba4e2cf42eaec1f2f10dd1d2d7b/VHQE01000020.vcf.gz.tbi .
+cp .././work/1c/c9976081e505abb9190a7b8369afd2/VHQE01000314.vcf.gz.tbi .
+cp .././work/02/5cf31db5d40dc351532b378e25ffab/VHQE01000393.vcf.gz.tbi .
+cp .././work/3d/2bafa93f6f2c5ef24862e309e5a56b/VHQE01000098.vcf.gz.tbi .
+cp .././work/42/c836bb84d780a94c1e9c0411f86685/VHQE01000426.vcf.gz.tbi .
+cp .././work/7b/1856a1a38ee0c1ada69f7a948a6ddc/VHQE01000468.vcf.gz.tbi .
+
+# Making a list of vcf files to sort
+find ../. -name "*.vcf.gz" | grep -v "sort"
+
+### Note relative paths ###
+./VHQE01000282.vcf.gz
+./VHQE01000364.vcf.gz
+./VHQE01000468.vcf.gz
+./VHQE01000001.vcf.gz
+./VHQE01000393.vcf.gz
+./VHQE01000020.vcf.gz
+./VHQE01000409.vcf.gz
+./VHQE01000426.vcf.gz
+./VHQE01000164.vcf.gz
+./VHQE01000098.vcf.gz
+
+## Making array script to start jobs for every file
+
+sort_vcf.sh:
+
+
+#!/bin/bash
+#SBATCH -A naiss2024-5-5
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 00:50:00
+#SBATCH -J bcftools
+#SBATCH --job-name=bcftools_sort
+#SBATCH --output=bcftools_sort_%A_%a.out
+#SBATCH --error=bcftools_sort_%A_%a.err
+#SBATCH --mail-user=daria.shipilina@gmail.com
+#SBATCH --mail-type=ALL
+#SBATCH --array=0-9
+
+# Load modules
+module load bioinfo-tools bcftools
+
+# Read the specific line for this task using sed
+input_file="input_list.txt"
+vcf_file=$(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" $input_file)
+base_name=$(basename $vcf_file .vcf.gz)
+
+# Run the bcftools sort command
+bcftools sort --output ${base_name}.sort.vcf.gz --output-type z $vcf_file
+
+## "Hard" filtering for quality
+
+#!/bin/bash
+#SBATCH -A naiss2024-5-5
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 06:30:00
+#SBATCH --job-name=QCvcf
+#SBATCH --output=QCvcf_%A_%a.out
+#SBATCH --error=QCvcf_%A_%a.err
+#SBATCH --mail-user=daria.shipilina@gmail.com
+#SBATCH --mail-type=ALL
+#SBATCH --array=0-9
+
+module load bioinfo-tools vcftools bcftools
+
+# Read the specific line for this task using sed
+input_file="input_list_filter.txt"
+vcf_file=$(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" $input_file)
+base_name=$(basename $vcf_file .sort.vcf.gz)
+
+# Run filters
+bcftools filter -e 'TYPE="indel" || FS>60.0 || SOR>3 || MQ<40 || MQRankSum<-12.5 || QD<2.0 || ReadPosRankSum<-8.0' \
+    -g 5:indel,other -o ${base_name}.sort.hardfilter.vcf.gz \
+    ${base_name}.sort.vcf.gz
+
+# Index the filtered VCF
+bcftools index ${base_name}.sort.hardfilter.vcf.gz
+
+vcftools --gzvcf ${base_name}.sort.hardfilter.vcf.gz --remove-indels --recode --stdout | gzip -c > ${base_name}.sort.hardfilter.ni.vcf.gz
+
+# Index the VCF without indels
+bcftools index ${base_name}.sort.hardfilter.ni.vcf.gz
+
+vcftools --gzvcf ${base_name}.sort.hardfilter.ni.vcf.gz --minQ 20 --minGQ 30 --recode --stdout | bgzip -c > ${base_name}.sort.hardfilter.niGQ.vcf.gz
+
+# Index the VCF with minQ and minGQ filters applied
+bcftools index ${base_name}.sort.hardfilter.niGQ.vcf.gz
+
+bcftools view --max-alleles 2 -o ${base_name}.sort.hardfilter.niGQ.biall.vcf.gz ${base_name}.sort.hardfilter.niGQ.vcf.gz
+
+# Index the final VCF
+bcftools index ${base_name}.sort.hardfilter.niGQ.biall.vcf.gz
+
+### Creating input list for filtering
+find . -name "*sort.vcf.gz" > input_list_filter.txt
+
+### Moving filteting script
+
+### Filtering succesfull some intermediate filtering files removed to save space
+
+### Scripts for concatenation
+
+find . -name "*sort.hardfilter.niGQ.biall*" | grep -v "csi" > Phumei_merging_vcf.samples
+
+#!/bin/bash
+#SBATCH -A naiss2024-5-5
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 06:30:00
+#SBATCH --job-name=concat
+#SBATCH --output=concat%A_%a.out
+#SBATCH --error=concat%A_%a.err
+#SBATCH --mail-user=daria.shipilina@gmail.com
+#SBATCH --mail-type=ALL
+
+module load bioinfo-tools vcftools bcftools
+
+cd /crex/proj/uppstore2019097/private/Gustav/01_sarek/final_merging_D
+
+#find . -name "*sort.hardfilter.niGQ.biall*" | grep -v "csi" > Phumei_merging_vcf.samples
+bcftools concat -f Phumei_merging_vcf.samples -o Phumei_merging_vcf.samples.vcf.gz
